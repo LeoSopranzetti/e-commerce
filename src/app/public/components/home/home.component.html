@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="filters">
+        <div class="filter-buttons">
+            <p (click)="changeCategory('ALL')" [ngClass]="{ 'ACTIVE' : isAll }" class="button-text">TODOS OS PRODUTOS</p>
+            <p (click)="changeCategory('SHIRTS')" [ngClass]="{ 'ACTIVE' : isShirts }" class="button-text">CAMISETAS</p>
+            <p (click)="changeCategory('MUGS')" [ngClass]="{ 'ACTIVE' : isMugs }" class="button-text">CANECAS</p>
+        </div>
+        <div class="filter-details">
+            <p>Organizar por</p>
+            <img src="../../../../assets/imgs/icons/filter-arrow.svg" alt="">
+        </div>
+    </div>
+
+    <div class="row m-0 card-list">,
+        <div class="item" *ngFor="let item of this.products">
+            <product-card  [product]="item" ></product-card>
+        </div>
+
+    </div>
+
+
+</div>

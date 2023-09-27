@@ -1,0 +1,100 @@
+{
+  "patients": [
+    {
+      "id": 0,
+      "name": "Caneca de cerâmica rústica",
+      "description": "A Caneca de cerâmica rústica é uma peça artesanal de qualidade excepcional. Feita com cerâmica de alta resistência, esta caneca é perfeita para desfrutar de sua bebida favorita. Seu design rústico e elegante é a adição ideal para sua coleção de canecas. Com capacidade para uma grande quantidade de líquido, esta caneca é perfeita para chás, cafés e muito mais. Sua alça ergonômica garante uma pegada confortável e segura. Além disso, sua superfície é fácil de limpar e resistente a arranhões. Esta caneca será a sua companhira ideal para manhãs relaxantes e tardes aconchegantes. Aproveite a qualidade e o estilo desta caneca única.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/caneca-06.jpg",
+      "category": "mugs",
+      "price": 50
+    },
+    {
+      "id": 1,
+      "name": "Camiseta not today.",
+      "description": "A Camiseta not today. é uma peça de vestuário que exala estilo e personalidade. Feita com tecido de alta qualidade, esta camiseta é a escolha perfeita para expressar seu estilo único. Seu design exclusivo apresenta uma estampa moderna que chama a atenção. A Camiseta not today. se destaca na multidão e é perfeita para todas as ocasiões. Seu tecido macio e confortável garante um ajuste perfeito. Esta camiseta é uma declaração de moda e individualidade. Adicione um toque de ousadia ao seu guarda-roupa com a Camiseta not today.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-05.jpg",
+      "category": "t-shirts",
+      "price": 30
+    },
+    {
+      "id": 2,
+      "name": "Caneca Black Ring",
+      "description": "A Caneca Black Ring é uma obra-prima de elegância e funcionalidade. Feita com cerâmica de alta qualidade, esta caneca é uma adição elegante à sua coleção de canecas. Seu design clássico apresenta um anel preto que adiciona um toque de sofisticação. Esta caneca é perfeita para desfrutar de café, chá ou qualquer outra bebida quente. Sua alça ergonômica proporciona uma pegada confortável e segura. Além disso, a Caneca Black Ring é fácil de limpar e resistente a arranhões. Elevar sua experiência de bebida nunca foi tão fácil. Aproveite cada gole com esta caneca excepcional.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/caneca-04.jpg",
+      "category": "mugs",
+      "price": 40
+    },
+    {
+      "id": 3,
+      "name": "Camiseta Broken Saints",
+      "description": "A Camiseta Broken Saints é um item essencial para os amantes de camisetas. Feita com tecido de alta qualidade, esta camiseta oferece conforto excepcional e estilo incomparável. Seu design apresenta uma estampa exclusiva inspirada no conceito de santos quebrados. Esta camiseta é a escolha perfeita para quem procura se destacar na multidão. Seu corte moderno e ajuste confortável tornam-na adequada para todas as ocasiões. Se você busca uma camiseta que combine estilo e originalidade, a Camiseta Broken Saints é a escolha certa.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-03.jpg",
+      "category": "t-shirts",
+      "price": 25
+    },
+    {
+      "id": 4,
+      "name": "Camiseta Outcast",
+      "description": "A Camiseta Outcast é a escolha perfeita para aqueles que querem se destacar na multidão. Feita com tecido de alta qualidade, esta camiseta é uma declaração de estilo. Seu design exclusivo apresenta uma estampa moderna e ousada que chama a atenção. Esta camiseta é confortável e versátil, adequada para uso diário ou ocasiões especiais. Se você busca uma peça de vestuário que combine ousadia e individualidade, a Camiseta Outcast é a opção ideal.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-06.jpg",
+      "category": "t-shirts",
+      "price": 35
+    },
+    {
+      "id": 5,
+      "name": "Caneca The Grounds",
+      "description": "A Caneca The Grounds é a companhia ideal para suas manhãs relaxantes. Feita com cerâmica de alta qualidade, esta caneca é perfeita para desfrutar de café, chá ou qualquer outra bebida quente. Seu design elegante e minimalista se encaixa perfeitamente em qualquer ambiente. A Caneca The Grounds possui alça ergonômica para uma pegada confortável e segura. Além disso, é fácil de limpar e resistente a arranhões. Comece o seu dia da melhor maneira possível com a Caneca The Grounds. Aproveite a qualidade e o estilo excepcionais.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/caneca-05.jpg",
+      "category": "mugs",
+      "price": 60
+    },
+    {
+      "id": 6,
+      "name": "Camiseta evening",
+      "description": "A Camiseta evening é uma adição elegante ao seu guarda-roupa. Feita com tecido de alta qualidade, esta camiseta oferece conforto e estilo excepcionais. Seu design apresenta um visual moderno e versátil que combina com diversas ocasiões. Esta camiseta é a escolha perfeita para quem valoriza o estilo e o conforto. Se você busca uma peça de vestuário versátil e elegante, a Camiseta evening é a opção ideal.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-02.jpg",
+      "category": "t-shirts",
+      "price": 20
+    },
+    {
+      "id": 7,
+      "name": "Caneca preto fosco",
+      "description": "A Caneca preto fosco é perfeita para desfrutar de café, chá ou qualquer bebida quente de sua preferência. Feita com cerâmica de alta qualidade, esta caneca possui um acabamento preto fosco que adiciona um toque de sofisticação. Sua alça ergonômica proporciona uma pegada confortável e segura. Além disso, a Caneca preto fosco é fácil de limpar e resistente a arranhões. Aproveite cada gole com esta caneca elegante e funcional.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/caneca-01.jpg",
+      "category": "mugs",
+      "price": 75
+    },
+    {
+      "id": 8,
+      "name": "Caneca Never settle",
+      "description": "A Caneca Never settle é uma lembrança constante de seus objetivos e aspirações. Feita com cerâmica de alta qualidade, esta caneca é perfeita para desfrutar de sua bebida favorita. Seu design exclusivo apresenta a frase 'Never settle', que inspira a busca pela excelência. Esta caneca possui alça ergonômica para uma pegada confortável e segura. Além disso, é fácil de limpar e resistente a arranhões. A Caneca Never settle é uma companhia inspiradora para suas manhãs e pausas relaxantes. Alcance mais com esta caneca motivadora.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/caneca-03.jpg",
+      "category": "mugs",
+      "price": 55
+    },
+    {
+      "id": 9,
+      "name": "Camiseta DREAMER",
+      "description": "A Camiseta DREAMER é uma declaração de estilo e inspiração. Feita com tecido de alta qualidade, esta camiseta é confortável e estilosa. Seu design apresenta a palavra 'DREAMER', que expressa a busca pelos sonhos e aspirações. Esta camiseta é perfeita para quem procura se destacar com uma mensagem positiva. Seu corte moderno e ajuste confortável garantem um visual impecável. Seja um sonhador com a Camiseta DREAMER.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-01.jpg",
+      "category": "t-shirts",
+      "price": 45
+    },
+    {
+      "id": 10,
+      "name": "Caneca Decaf! P&Co",
+      "description": "A Caneca Decaf! P&Co é a escolha perfeita para desfrutar de seu café descafeinado favorito. Feita com cerâmica de alta qualidade, esta caneca é resistente e elegante. Seu design apresenta o logotipo 'Decaf! P&Co' que simboliza o amor pelo café. A Caneca Decaf! P&Co possui alça ergonômica para uma pegada confortável e segura. Além disso, é fácil de limpar e resistente a arranhões. Desfrute do seu café descafeinado com estilo com esta caneca única.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/caneca-02.jpg",
+      "category": "mugs",
+      "price": 70
+    },
+    {
+      "id": 11,
+      "name": "Camiseta Ramones",
+      "description": "A Camiseta Ramones é uma homenagem à icônica banda de punk rock. Feita com tecido de alta qualidade, esta camiseta é uma declaração de amor à música. Seu design apresenta o logotipo clássico dos Ramones, um ícone da cultura musical. Esta camiseta é confortável e estilosa, perfeita para os fãs de rock. Use a Camiseta Ramones com orgulho e mostre sua paixão pela música.",
+      "image_url": "https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-04.jpg",
+      "category": "t-shirts",
+      "price": 90
+    }
+  ]
+}
