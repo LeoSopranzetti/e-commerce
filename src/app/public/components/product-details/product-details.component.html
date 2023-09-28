@@ -1,0 +1,27 @@
+<div class="container">
+    <div (click)="backToHome()" class="back-option">
+        <img src="../../../../assets/imgs/icons/back-icon.svg" alt="">
+        <p class="back-title">Voltar</p>
+    </div>
+
+    <div class="product">
+        <div>
+            <img class="img" src={{product.image_url}} alt="">
+        </div>
+        <div class="description">
+            <div class="text">
+                <p *ngIf="product.category === 'mugs'" class="category">Canecas</p>
+                <p *ngIf="product.category === 't-shirts'" class="category">Camisetas</p>
+                <p class="name">{{product.name}}</p>
+                <p class="price">{{product.price | currency:'BRL':'symbol':'1.2-2'}}</p>
+                <p class="delivery">*Frete de R$ 40,00 para todo Brasil. Grátis para compras acima de R$900,00.</p>
+                <p class="description-title">DESCRIÇÃO</p>
+                <p class="product-description">{{product.description}}</p>
+            </div>
+
+            <div class="button">
+                <button><img src="../../../../assets/imgs/icons/icon-button.svg" alt="">ADICIONAR AO CARRINHO</button>
+            </div>
+        </div>
+    </div>
+</div>

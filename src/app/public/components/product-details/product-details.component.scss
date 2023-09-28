@@ -1,0 +1,118 @@
+.container {
+    max-width: 1200px;
+    width: 1200px;
+    padding-top: 30px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+
+    .back-option{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 30px;
+
+        .back-title{
+            color: #617480;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+            margin-left: 5px;
+        }
+    }
+
+    .product {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 580px;
+
+        .img{
+            border-radius: 5px 5px 5px 5px;
+            height: 100%;
+        }
+
+        .description{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            margin-left: 30px;
+
+            .text{
+                color: #41414D;
+                font-weight: 400;
+                .category {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 10px;
+                }
+                .name{
+                    font-weight: 300;
+                    font-size: 32px;
+                    line-height: 48px;
+                    margin-bottom: 5px;
+                }
+                .price {
+                    color: #09090A;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 30px;
+                    margin-bottom: 15px;
+                }
+                .delivery{
+                    font-size: 12px;
+                    line-height: 18px;
+                    margin-bottom: 40px;
+                }
+                .description-title{
+                    color: #737380;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 10px;
+                }
+                .product-description{
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+            }
+
+            .button{
+                button{
+                    width: 100%;
+                    background-color: #115D8C;
+                    color: #fff;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 10px 20px;
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: 24px;
+                    cursor: pointer;
+                    transition: background-color 0.3s, color 0.3s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                button:hover {
+                    background-color: #001f3f ;
+                    color: #fff;
+                }
+
+                button img {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 8px;
+                }
+            }
+        }
+
+
+        
+
+    }
+
+}

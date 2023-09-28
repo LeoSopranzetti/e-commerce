@@ -13,7 +13,10 @@
 
     <div class="row m-0 card-list">,
         <div class="item" *ngFor="let item of this.products">
-            <product-card  [product]="item" ></product-card>
+            <div (click)="navigateToProductDetails(item)">
+                <product-card  [product]="item" ></product-card>
+            </div>
+
         </div>
 
     </div>

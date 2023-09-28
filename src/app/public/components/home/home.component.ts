@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductModel } from '../../models/product';
 import { catchError, tap } from 'rxjs';
 import { PublicService } from '../../services/public.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,8 @@ export class HomeComponent {
 
   constructor(
     private publicService: PublicService ,
+    private router: Router,
+    private route: ActivatedRoute
     ) { }
   
     ngOnInit(): void {
@@ -57,6 +60,10 @@ export class HomeComponent {
         this.products = this.allProducts.filter(item => item.category === "t-shirts"); 
         this.isShirts = true;
       }
+    }
+
+    navigateToProductDetails(product: ProductModel) {
+      this.router.navigate(['product-details', product.id], { relativeTo: this.route, state: { product } });
     }
   
 
