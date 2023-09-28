@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="cart">
+        <div (click)="backToHome()" class="back-option">
+            <img src="../../../../assets/imgs/icons/back-icon.svg" alt="">
+            <p class="back-title">Voltar</p>
+        </div>
+
+        <div>
+            <p class="title">Seu Carrinho</p>
+            <p class="cart-description">Total (3 produtos) <span style="font-weight: 600;">R$ 161,00</span></p>
+        </div>
+
+        <div class="item" *ngFor="let item of this.cartList">
+            <div>
+                <product-cart  [product]="item" ></product-cart>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="resume">
+
+        <div>
+            <p class="resume-text">RESUMO DO PEDIDO</p>
+            <div class="rows normal-text">
+                <p>Subtotal de produtos</p>
+                <p>R$ 161,00</p>
+            </div>
+            <div class="rows normal-text">
+                <p>Entrega</p>
+                <p>R$ 40,00</p>
+            </div>
+            <div class="rows total-text">
+                <p>Total</p>
+                <p>R$ 201,00</p>
+            </div>
+            <button>Finalizar Compra</button>
+        </div>
+
+        <div class="link-text">
+            <p>AJUDA</p>
+            <p>REEMBOLSOS</p>
+            <p>ENTREGAS E FRETE</p>
+            <p>TROCAS E DEVOLUÇÕES</p>
+        </div>
+    </div>
+
+</div>

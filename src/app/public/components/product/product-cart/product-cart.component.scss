@@ -1,0 +1,17 @@
+.product-card{
+    max-height: 211px;
+    height: 211px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-right: 30px;
+
+    .img {
+
+        img{
+            max-height: 211px;
+        }
+    }
+
+}

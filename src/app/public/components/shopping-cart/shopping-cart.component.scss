@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .cart{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        .back-option{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 25px;
+    
+            .back-title{
+                color: #617480;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 21px;
+                margin-left: 5px;
+            }
+        }
+
+        .title{
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .cart-description{
+            font-size: 16px;
+            line-height: 24px; 
+            font-weight: 300;
+        }
+    }
+    
+    .resume{
+        width: 30%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70vh;
+        padding: 15px;
+        line-height: 24px;
+        color: #41414D;
+        font-size: 16px;
+
+        .resume-text{
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .normal-text{
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .total-text{
+            font-weight: 600;
+            margin-bottom: 30px;
+            border-top: 1px solid #DCE2E5;
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+
+        .link-text{
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+            color: #737380;
+            text-decoration: underline;
+
+            p {
+                margin-bottom: 10px;
+            }
+
+        }
+
+        .rows{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+        button{
+            width: 100%;
+            background-color: #51B853;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button:hover {
+            background-color: #44A549 ;
+            color: #fff;
+        }
+
+        
+
+    }
+
+}

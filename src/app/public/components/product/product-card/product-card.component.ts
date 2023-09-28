@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProductModel } from '../../models/product';
-import { ActivatedRoute } from '@angular/router';
+import { ProductModel } from '../../../models/product';
 
 @Component({
   selector: 'product-card',

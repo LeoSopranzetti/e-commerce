@@ -3,13 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProductModel } from '../../models/product';
 
 @Component({
-  selector: 'app-product-details',
-  templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.scss']
+  selector: 'app-shopping-cart',
+  templateUrl: './shopping-cart.component.html',
+  styleUrls: ['./shopping-cart.component.scss']
 })
-export class ProductDetailsComponent {
+export class ShoppingCartComponent {
 
-    product!: ProductModel;
+  cartList: ProductModel[] = [];
+
 
   constructor(
     private route: ActivatedRoute,
@@ -17,13 +18,11 @@ export class ProductDetailsComponent {
   ) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.product = history.state.product;
-    });
+    const jsonCartList = localStorage.getItem('cartList') as string;
+    this.cartList = JSON.parse(jsonCartList);
   }
 
   public backToHome(){
     this.router.navigate(['../home']);
   }
-
 }
