@@ -31,6 +31,7 @@ export class ShoppingCartComponent {
   }
 
   public calcSubtotalPrice(){
+    this.subTotalPrice = 0;
     this.cartList.forEach(element => {
       this.subTotalPrice += element.price;
     });
@@ -38,6 +39,19 @@ export class ShoppingCartComponent {
   }
 
   public calcTotalPice(){
+    this.totalPrice = 0;
     this.totalPrice = this.subTotalPrice + this.deliveryPrice;
   }
+
+  deleteProduct(product: any) {
+    const index = this.cartList.indexOf(product);
+    if (index !== -1) {
+      this.cartList.splice(index, 1);
+      this.calcSubtotalPrice();
+      const jsonCartListString = JSON.stringify(this.cartList);
+      localStorage.setItem('cartList', jsonCartListString);
+    }
+    
+  }
+
 }

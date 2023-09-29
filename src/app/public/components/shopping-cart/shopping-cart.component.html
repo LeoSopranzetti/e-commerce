@@ -12,7 +12,7 @@
 
         <div class="item" *ngFor="let item of this.cartList">
             <div>
-                <product-cart  [product]="item" ></product-cart>
+                <product-cart (updateTotalPrice)="calcSubtotalPrice()" (deleteProductEvent)="deleteProduct(item)" [product]="item" ></product-cart>
             </div>
         </div>
 
