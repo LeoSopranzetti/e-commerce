@@ -7,7 +7,7 @@
 
         <div>
             <p class="title">Seu Carrinho</p>
-            <p class="cart-description">Total (3 produtos) <span style="font-weight: 600;">R$ 161,00</span></p>
+            <p class="cart-description">Total ({{cartList.length}} produtos) <span style="font-weight: 600;">{{subTotalPrice | currency:'BRL':'symbol':'1.2-2'}}</span></p>
         </div>
 
         <div class="item" *ngFor="let item of this.cartList">
@@ -24,15 +24,15 @@
             <p class="resume-text">RESUMO DO PEDIDO</p>
             <div class="rows normal-text">
                 <p>Subtotal de produtos</p>
-                <p>R$ 161,00</p>
+                <p>{{subTotalPrice | currency:'BRL':'symbol':'1.2-2'}}</p>
             </div>
             <div class="rows normal-text">
                 <p>Entrega</p>
-                <p>R$ 40,00</p>
+                <p>{{deliveryPrice | currency:'BRL':'symbol':'1.2-2'}}</p>
             </div>
             <div class="rows total-text">
                 <p>Total</p>
-                <p>R$ 201,00</p>
+                <p>{{totalPrice | currency:'BRL':'symbol':'1.2-2'}}</p>
             </div>
             <button>Finalizar Compra</button>
         </div>

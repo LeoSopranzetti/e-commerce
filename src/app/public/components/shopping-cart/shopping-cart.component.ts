@@ -10,6 +10,9 @@ import { ProductModel } from '../../models/product';
 export class ShoppingCartComponent {
 
   cartList: ProductModel[] = [];
+  totalPrice: number = 0;
+  deliveryPrice: number = 40;
+  subTotalPrice: number = 0;
 
 
   constructor(
@@ -20,9 +23,21 @@ export class ShoppingCartComponent {
   ngOnInit(): void {
     const jsonCartList = localStorage.getItem('cartList') as string;
     this.cartList = JSON.parse(jsonCartList);
+    this.calcSubtotalPrice();
   }
 
   public backToHome(){
     this.router.navigate(['../home']);
+  }
+
+  public calcSubtotalPrice(){
+    this.cartList.forEach(element => {
+      this.subTotalPrice += element.price;
+    });
+    this.calcTotalPice();
+  }
+
+  public calcTotalPice(){
+    this.totalPrice = this.subTotalPrice + this.deliveryPrice;
   }
 }

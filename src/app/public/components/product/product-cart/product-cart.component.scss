@@ -6,11 +6,88 @@
     flex-direction: row;
     margin-bottom: 20px;
     margin-right: 30px;
+    border-radius: 10px;
 
     .img {
 
         img{
             max-height: 211px;
+            border-radius: 10px 0 0 10px;
+        }
+    }
+
+    .product{
+        padding: 15px 20px 20px 20px;
+        color: #41414D;
+        .name {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            p{
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 30px;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+        .description{
+            max-height: 80px;
+            overflow: auto; 
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #f2f2f2;
+            &::-webkit-scrollbar {
+                width: 12px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+            background-color: #59595C;
+            border-radius: 10px;
+            }
+        
+            &::-webkit-scrollbar-track {
+            background-color: #737380;
+            border-radius: 10px;
+            }
+            p{
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+        .quantity-price{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            p {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: #09090A;
+            }
+            select {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 5px 5px 5px 12px;
+                background-color: #f2f2f2;
+                width: 65px;
+                color: #737380;
+                &:focus {
+                    outline: none;
+                    border-color: #737380;
+                }
+            }
+
+            select option {
+                padding: 10px;
+            }
         }
     }
 

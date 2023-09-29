@@ -4,14 +4,20 @@
         <img src={{product.image_url}} alt="">
     </div>
 
-    <div>
-        <div>
+    <div class="product">
+        <div class="name">
             <p>{{product.name}}</p>
             <img src="../../../../assets/imgs/icons/delete-cart.svg" alt="">
         </div>
-        <p>{{product.description}}</p>
-        <div>
-            <select name="" id=""></select>
+        <p class="description">{{product.description}}</p>
+        <div class="quantity-price">
+            <select name="" id="">
+                <option  value="1">1</option>
+                <option  value="2">2</option>
+                <option  value="3">3</option>
+                <option  value="4">4</option>
+                <option  value="5">5</option>
+            </select>
             <p>{{product.price | currency:'BRL':'symbol':'1.2-2'}}</p>
         </div>
     </div>
