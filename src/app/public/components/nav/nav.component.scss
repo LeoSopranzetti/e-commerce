@@ -23,6 +23,7 @@
         .input-box{
             display: flex;
             flex-direction: row;
+            align-items: center;
 
             input {
                 width: 360px;
@@ -55,9 +56,22 @@
                 background-repeat: no-repeat;
               }
 
-              img {
+              .cart-container{
                 cursor: pointer;
+                position: relative;
+                display: inline-block;
+                .cart-badge {
+                  position: absolute;
+                  top: 15px;
+                  right: -5px;
+                  background-color: #DE3838;
+                  color: white;
+                  border-radius: 50%;
+                  padding: 3px 6px;
+                  font-size: 8px;
+                }
               }
+
         }
         }
 

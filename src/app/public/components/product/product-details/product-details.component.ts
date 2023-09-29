@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductModel } from '../../../models/product';
+import { PublicService } from 'src/app/public/services/public.service';
 
 @Component({
   selector: 'app-product-details',
@@ -14,7 +15,8 @@ export class ProductDetailsComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private publicService: PublicService
   ) { }
 
   ngOnInit(): void {
@@ -42,8 +44,8 @@ export class ProductDetailsComponent {
 
   public setLocalStorage(){
     this.cartList.push(this.product);
-    const jsonCartListString = JSON.stringify(this.cartList);
-    localStorage.setItem('cartList', jsonCartListString);
+    this.publicService.setCardList(this.cartList);
+    this.publicService.updateShoppingCartCountValue(this.cartList.length);
   }
 
 }

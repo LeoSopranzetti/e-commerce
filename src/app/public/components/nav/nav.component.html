@@ -8,7 +8,11 @@
                 <input type="text" placeholder="Porcurando por algo específico?">
             </div>
 
-            <img (click)="goToShoppingCart()" src="../../../../assets/imgs/icons/shopping-bag.svg" alt="">
+            <div (click)="goToShoppingCart()" class="cart-container">
+                <img  src="../../../../assets/imgs/icons/shopping-bag.svg" alt="">
+                <div class="cart-badge" *ngIf="cartItemCount > 0">{{ cartItemCount }}</div>
+            </div>
+
         </div>
     </div>
 </div>

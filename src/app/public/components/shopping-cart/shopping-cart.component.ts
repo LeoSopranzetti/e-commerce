@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductModel } from '../../models/product';
+import { PublicService } from '../../services/public.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -17,7 +18,8 @@ export class ShoppingCartComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private publicService: PublicService
   ) { }
 
   ngOnInit(): void {
@@ -48,8 +50,8 @@ export class ShoppingCartComponent {
     if (index !== -1) {
       this.cartList.splice(index, 1);
       this.calcSubtotalPrice();
-      const jsonCartListString = JSON.stringify(this.cartList);
-      localStorage.setItem('cartList', jsonCartListString);
+      this.publicService.setCardList(this.cartList);
+      this.publicService.updateShoppingCartCountValue(this.cartList.length);
     }
     
   }
