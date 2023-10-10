@@ -1,19 +1,24 @@
 <div class="container">
     <div class="filters">
+
         <div class="filter-buttons">
             <p (click)="changeCategory('ALL')" [ngClass]="{ 'ACTIVE' : isAll }" class="button-text">TODOS OS PRODUTOS</p>
             <p (click)="changeCategory('SHIRTS')" [ngClass]="{ 'ACTIVE' : isShirts }" class="button-text">CAMISETAS</p>
             <p (click)="changeCategory('MUGS')" [ngClass]="{ 'ACTIVE' : isMugs }" class="button-text">CANECAS</p>
         </div>
-        <div class="filter-details">
-            <p>Organizar por</p>
-            <img src="../../../../assets/imgs/icons/filter-arrow.svg" alt="">
+
+        <div class="filter-page">
+            <div class="filter-details">
+                <p>Organizar por</p>
+                <img src="../../../../assets/imgs/icons/filter-arrow.svg" alt="">
+            </div>
+            <div *ngIf="pagination" class="pagination">
+                <button *ngFor="let page of pages()" (click)="setCurrentPage(page)">
+                  {{ page }}
+                </button>
+            </div>
         </div>
-        <div class="pagination">
-            <button *ngFor="let page of pages()" (click)="setCurrentPage(page)">
-              {{ page }}
-            </button>
-          </div>
+
     </div>
 
     <div class="row m-0 card-list">,

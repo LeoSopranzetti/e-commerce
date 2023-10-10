@@ -17,7 +17,8 @@ export class HomeComponent {
   isShirts: boolean = false;
   isMugs: boolean = false;
   currentPage: number = 1;
-  itemsPerPage: number = 3;
+  itemsPerPage: number = 5;
+  pagination: boolean = true;
 
 
   constructor(
@@ -54,15 +55,19 @@ export class HomeComponent {
       if(caterogy === "ALL") {
         this.products = this.allProducts; 
         this.isAll = true;
+        this.pagination = true;
+        this.setCurrentPage(1);
       }
       if(caterogy === "MUGS") {
         this.products = this.allProducts.filter(item => item.category === "mugs"); 
         this.isMugs = true;
+        this.pagination = false;
       }
 
       if(caterogy === "SHIRTS") {
         this.products = this.allProducts.filter(item => item.category === "t-shirts"); 
         this.isShirts = true;
+        this.pagination = false;
       }
     }
 
@@ -82,9 +87,7 @@ export class HomeComponent {
 
     public paginateItems() {
       const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-      console.log(startIndex);
       const endIndex = startIndex + this.itemsPerPage;
-      console.log(endIndex);
       return this.allProducts.slice(startIndex, endIndex);
     }
   

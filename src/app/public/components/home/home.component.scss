@@ -5,6 +5,7 @@
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 30px;
+        align-items: start;
 
 
         .filter-buttons{
@@ -28,24 +29,30 @@
             }
         }
 
-        .filter-details{
+        .filter-page{
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                width: 25px;
-
-            }
-
-            p {
-                color: #737380;
-                font-size: 14px;
-                line-height: 22px;
-                margin: 0;
+            flex-direction: column;
+            .filter-details{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+    
+                img {
+                    width: 25px;
+    
+                }
+    
+                p {
+                    color: #737380;
+                    font-size: 14px;
+                    line-height: 22px;
+                    margin: 0;
+                }
             }
         }
+
+
     }
 
     .card-list{
