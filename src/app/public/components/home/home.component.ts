@@ -16,6 +16,9 @@ export class HomeComponent {
   isAll: boolean = true;
   isShirts: boolean = false;
   isMugs: boolean = false;
+  currentPage: number = 1;
+  itemsPerPage: number = 3;
+
 
   constructor(
     private publicService: PublicService ,
@@ -33,6 +36,7 @@ export class HomeComponent {
         tap((res : any ) => {
           this.products = res;
           this.allProducts = res;
+          this.setCurrentPage(this.currentPage);
         }),
         catchError((error)=> {
           return error
@@ -62,8 +66,26 @@ export class HomeComponent {
       }
     }
 
-    navigateToProductDetails(product: ProductModel) {
+    public navigateToProductDetails(product: ProductModel) {
       this.router.navigate(['product-details', product.id], { relativeTo: this.route, state: { product } });
+    }
+
+    public pages(): number[] {
+      const totalPages = Math.ceil(this.allProducts.length / this.itemsPerPage);
+      return Array.from({ length: totalPages }, (_, index) => index + 1);
+    }
+
+    public setCurrentPage(page: number) {
+      this.currentPage = page;
+      this.products = this.paginateItems();
+    }
+
+    public paginateItems() {
+      const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+      console.log(startIndex);
+      const endIndex = startIndex + this.itemsPerPage;
+      console.log(endIndex);
+      return this.allProducts.slice(startIndex, endIndex);
     }
   
 
