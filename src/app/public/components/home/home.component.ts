@@ -11,14 +11,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HomeComponent {
 
-  products: ProductModel[] = [];
+  productsOnPage: ProductModel[] = [];
   allProducts: ProductModel[] = [];
+  allProductsPerType: ProductModel[] = [];
   isAll: boolean = true;
   isShirts: boolean = false;
   isMugs: boolean = false;
   currentPage: number = 1;
   itemsPerPage: number = 5;
-  pagination: boolean = true;
+  numberOfButtons: number[] = [];
 
 
   constructor(
@@ -35,9 +36,10 @@ export class HomeComponent {
 
       this.publicService.getAllProdutcts().pipe(
         tap((res : any ) => {
-          this.products = res;
           this.allProducts = res;
+          this.allProductsPerType = res;
           this.setCurrentPage(this.currentPage);
+          this.numberOfButtons = this.pages();
         }),
         catchError((error)=> {
           return error
@@ -47,27 +49,31 @@ export class HomeComponent {
     }
 
     public changeCategory(caterogy : string){
-      this.products = [];
       this.isAll = false;
       this.isMugs = false;
       this.isShirts = false;
+      this.allProductsPerType = this.allProducts;
+      this.numberOfButtons = [];
+      this.productsOnPage = [];
       
       if(caterogy === "ALL") {
-        this.products = this.allProducts; 
+        this.allProductsPerType = this.allProducts; 
         this.isAll = true;
-        this.pagination = true;
         this.setCurrentPage(1);
+        this.numberOfButtons = this.pages();
       }
       if(caterogy === "MUGS") {
-        this.products = this.allProducts.filter(item => item.category === "mugs"); 
+        this.allProductsPerType = this.allProducts.filter(item => item.category === "mugs"); 
         this.isMugs = true;
-        this.pagination = false;
+        this.setCurrentPage(1);
+        this.numberOfButtons = this.pages();
       }
 
       if(caterogy === "SHIRTS") {
-        this.products = this.allProducts.filter(item => item.category === "t-shirts"); 
+        this.allProductsPerType = this.allProducts.filter(item => item.category === "t-shirts"); 
         this.isShirts = true;
-        this.pagination = false;
+        this.setCurrentPage(1);
+        this.numberOfButtons = this.pages();
       }
     }
 
@@ -76,19 +82,19 @@ export class HomeComponent {
     }
 
     public pages(): number[] {
-      const totalPages = Math.ceil(this.allProducts.length / this.itemsPerPage);
+      const totalPages = Math.ceil(this.allProductsPerType.length / this.itemsPerPage);
       return Array.from({ length: totalPages }, (_, index) => index + 1);
     }
 
     public setCurrentPage(page: number) {
       this.currentPage = page;
-      this.products = this.paginateItems();
+      this.productsOnPage = this.paginateItems();
     }
 
     public paginateItems() {
       const startIndex = (this.currentPage - 1) * this.itemsPerPage;
       const endIndex = startIndex + this.itemsPerPage;
-      return this.allProducts.slice(startIndex, endIndex);
+      return this.allProductsPerType.slice(startIndex, endIndex);
     }
   
 

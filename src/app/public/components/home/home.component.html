@@ -12,8 +12,8 @@
                 <p>Organizar por</p>
                 <img src="../../../../assets/imgs/icons/filter-arrow.svg" alt="">
             </div>
-            <div *ngIf="pagination" class="pagination">
-                <button *ngFor="let page of pages()" (click)="setCurrentPage(page)">
+            <div class="buttons">
+                <button *ngFor="let page of numberOfButtons" (click)="setCurrentPage(page)" [ngClass]="{'active': page === currentPage, 'inactive': page !== currentPage}">
                   {{ page }}
                 </button>
             </div>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="row m-0 card-list">,
-        <div class="item" *ngFor="let item of this.products">
+        <div class="item" *ngFor="let item of this.productsOnPage">
             <div (click)="navigateToProductDetails(item)">
                 <product-card  [product]="item" ></product-card>
             </div>
