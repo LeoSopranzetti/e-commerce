@@ -31,7 +31,7 @@ export class HomeComponent {
       this.getAllPatients();
 
       this.publicService.specifSearch.subscribe((value) => {
-        value.length === 0 ? this.getAllPatients() : this.getSpecificSearch(value);
+        value.length === 0 ? this.getAllPatients() : this.setAllProductsAndSearchProducts(value);;
       });
 
     }
@@ -47,10 +47,6 @@ export class HomeComponent {
         })
       ).subscribe()
   
-    }
-
-    public getSpecificSearch(value: any[]){
-      this.setAllProductsAndSearchProducts(value);
     }
 
     setAllProductsAndSearchProducts(res: any[]){
