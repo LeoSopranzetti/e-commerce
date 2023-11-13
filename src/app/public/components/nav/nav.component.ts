@@ -48,7 +48,7 @@ export class NavComponent {
         switchMap((query: string) => this.searchApi(query))
       )
       .subscribe((results: any[]) => {
-        this.searchResults = results;
+        this.publicService.updateSpecificSearch(results);
       });
     }
   }
@@ -60,8 +60,7 @@ export class NavComponent {
   }
 
   searchApi(query: string) {
-    console.log(query);
-    return [];
+    return this.publicService.getProductsByName(query);
   }
 
   goToShoppingCart(){

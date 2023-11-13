@@ -21,8 +21,6 @@ export class HomeComponent {
   itemsPerPage: number = 5;
   numberOfButtons: number[] = [];
 
-
-
   constructor(
     private publicService: PublicService ,
     private router: Router,
@@ -31,22 +29,35 @@ export class HomeComponent {
   
     ngOnInit(): void {
       this.getAllPatients();
+
+      this.publicService.specifSearch.subscribe((value) => {
+        value.length === 0 ? this.getAllPatients() : this.getSpecificSearch(value);
+      });
+
     }
 
     public getAllPatients(){
 
       this.publicService.getAllProdutcts().pipe(
         tap((res : any ) => {
-          this.allProducts = res;
-          this.allProductsPerType = res;
-          this.setCurrentPage(this.currentPage);
-          this.numberOfButtons = this.pages();
+          this.setAllProductsAndSearchProducts(res);
         }),
         catchError((error)=> {
           return error
         })
       ).subscribe()
   
+    }
+
+    public getSpecificSearch(value: any[]){
+      this.setAllProductsAndSearchProducts(value);
+    }
+
+    setAllProductsAndSearchProducts(res: any[]){
+      this.allProducts = res;
+      this.allProductsPerType = res;
+      this.setCurrentPage(this.currentPage);
+      this.numberOfButtons = this.pages();
     }
 
     public changeCategory(caterogy : string){

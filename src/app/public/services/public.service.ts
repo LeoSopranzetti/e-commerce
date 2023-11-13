@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ProductModel } from '../models/product';
 import { environment } from 'src/assets/environments/environment';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 
 const API = environment.apiURL;
@@ -14,6 +14,7 @@ export class PublicService {
 
   product!: ProductModel;
   shoppingCartCount = new Subject<number>();
+  specifSearch = new Subject<any[]>();
   cartList: ProductModel[] = [];
 
   getCardList(){
@@ -34,6 +35,10 @@ export class PublicService {
     this.shoppingCartCount.next(newValue);
   }
 
+  updateSpecificSearch(newValue: any[]) {
+    this.specifSearch.next(newValue);
+  }
+
   constructor(
     private httpClient: HttpClient
   ) { }
@@ -46,8 +51,8 @@ export class PublicService {
     this.product = product;
   }
 
-  getProductsByName(name?: string){
-    return this.httpClient.get(`${API}/products?name=${name}`)
+  getProductsByName(name?: string):Observable<any>{
+    return this.httpClient.get(`${API}/products?name_like=${name}`)
   }
 
   getAllProdutcts(){
