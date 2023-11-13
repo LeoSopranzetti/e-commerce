@@ -8,9 +8,17 @@
         </div>
 
         <div class="filter-page">
-            <div class="filter-details">
-                <p>Organizar por</p>
-                <img src="../../../../assets/imgs/icons/filter-arrow.svg" alt="">
+            <div  class="organize-container" (click)="toggleOptions()">
+                <div class="filter-details" >
+                    <p>Organizar por</p>
+                    <img src="../../../../assets/imgs/icons/filter-arrow.svg" alt="">
+                </div>
+
+                <div class="options-container" *ngIf="showOptions">
+                    <div class="option" (click)="filter('TODOS')">Sem filtro</div>
+                    <div class="option" (click)="filter('MAIOR')">Preço maior - menor</div>
+                    <div class="option" (click)="filter('MENOR')">Preço menor - maior</div>
+                  </div>
             </div>
             <div class="buttons">
                 <button *ngFor="let page of numberOfButtons" (click)="setCurrentPage(page)" [ngClass]="{'active': page === currentPage, 'inactive': page !== currentPage}">

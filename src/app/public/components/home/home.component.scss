@@ -32,24 +32,64 @@
         .filter-page{
             display: flex;
             flex-direction: column;
-            .filter-details{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-    
-                img {
-                    width: 25px;
-    
-                }
-    
-                p {
+
+            .organize-container {
+                position: relative;
+                cursor: pointer;
+              
+                .options-container {
+                  display: none;
+                  position: absolute;
+                  top: 25px;
+                  right: 0;
+                  background-color: #fff;
+                  border: 1px solid #ccc;
+                  padding: 10px;
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                  border-radius: 5px;
+                  width: 165px;
+
+              
+                  .option {
+                    padding: 5px;
+                    cursor: pointer;
                     color: #737380;
                     font-size: 14px;
                     line-height: 22px;
-                    margin: 0;
+              
+                    &:hover {
+                      background-color: #f0f0f0;
+                    }
+                  }
                 }
-            }
+              
+                &:hover .options-container {
+                  display: block;
+                }
+
+                .filter-details{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+        
+                    img {
+                        width: 25px;
+        
+                    }
+        
+                    p {
+                        color: #737380;
+                        font-size: 14px;
+                        line-height: 22px;
+                        margin: 0;
+                    }
+                    
+    
+                }
+              }
+
 
             .buttons{
                 margin-top: 15px;
