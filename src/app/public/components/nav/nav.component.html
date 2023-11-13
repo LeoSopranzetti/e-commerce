@@ -4,8 +4,8 @@
             <p class="title">capputeeno</p>
         </div>
         <div class="input-box">
-            <div class="input-with-icon">
-                <input type="text" placeholder="Porcurando por algo específico?">
+            <div class="input-with-icon" [formGroup]="searchForm">
+                <input formControlName="searchInput"  type="text" placeholder="Porcurando por algo específico?">
             </div>
 
             <div (click)="goToShoppingCart()" class="cart-container">

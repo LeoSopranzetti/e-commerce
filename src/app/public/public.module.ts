@@ -8,6 +8,9 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { NavComponent } from './components/nav/nav.component';
 import { DefaultPageComponent } from './components/default-page/default-page.component';
 import { ProductCartComponent } from './components/product/product-cart/product-cart.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { ProductCartComponent } from './components/product/product-cart/product-
   ],
   imports: [
     CommonModule,
-    PublicRoutingModule
+    PublicRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports:[
     NavComponent

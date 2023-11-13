@@ -42,19 +42,19 @@ export class PublicService {
     return this.product;
   }
 
-  setStaticProduct(patient: ProductModel){
-    this.product = patient;
+  setStaticProduct(product: ProductModel){
+    this.product = product;
   }
 
   getProductsByName(name?: string){
-    return this.httpClient.get(`${API}/patients?nick=${name}`)
+    return this.httpClient.get(`${API}/products?name=${name}`)
   }
 
   getAllProdutcts(){
-    return this.httpClient.get(`${API}/patients`)
+    return this.httpClient.get(`${API}/products`)
   }
 
   deleteProduct(productId: number){
-    return this.httpClient.delete(`${API}/patients/${productId}`)
+    return this.httpClient.delete(`${API}/products/${productId}`)
   }
 }

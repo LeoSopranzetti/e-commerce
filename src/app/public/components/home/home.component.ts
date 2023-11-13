@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductModel } from '../../models/product';
-import { catchError, tap } from 'rxjs';
+import { Observable, Subject, catchError, tap } from 'rxjs';
 import { PublicService } from '../../services/public.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -20,6 +20,7 @@ export class HomeComponent {
   currentPage: number = 1;
   itemsPerPage: number = 5;
   numberOfButtons: number[] = [];
+
 
 
   constructor(
